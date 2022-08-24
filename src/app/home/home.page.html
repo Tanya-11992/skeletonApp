@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="green">
+    <ion-title sizze="small">Home - Skeleton App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>My Skeleton App</ion-card-title>
+      </ion-card-header>
+    
+
+      <ion-card-content>
+        <ion-item lines="none">
+          <!-- {{interpolacion}} 
+            Permite mostrar los datos desde el script a la visual
+            verificar el data en el home.page.ts
+          -->
+          <ion-label color="primary">Usuario:<strong>{{data.usuario}}</strong> </ion-label>
+        </ion-item>
+
+        <h3>Completa los datos</h3>
+
+        <ion-item> 
+          <ion-label position="floating" color="primary">Edad</ion-label>
+          <!-- Usamos ngModel para indicarle al input el objeto a utilizar-->
+          <ion-input type="number" required color="primary" [(ngModel)]="edad.edad"></ion-input>
+        </ion-item>
+
+
+          <ion-list>
+            <ion-item >
+              <ion-label position="floating" color="primary">Estudio</ion-label>
+              <ion-select color="primary" placeholder="respuesta" okText="Aceptar" cancelText="Cancelar" >
+                <ion-select-option color="primary" value="basica" >Básica</ion-select-option>
+                <ion-select-option value="media" >Media</ion-select-option>
+                <ion-select-option value="universitaria">Universitaria</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list> 
+
+          <ion-row>
+            <ion-col class="ion-float-left">
+                <ion-button color="primary" (click)="guardar()">Guardar</ion-button>
+            </ion-col>
+          </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+
+<!-- Fade Footer -->
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <div class="footer">Derechos Reservados | @Tanya Suazo 2022</div>
+  </ion-toolbar>
+</ion-footer>
+

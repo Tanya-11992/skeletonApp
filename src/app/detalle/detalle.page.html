@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="green">
+    <ion-title sizze="small">Detalle - Skeleton App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="flex-center">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>My Skeleton App</ion-card-title>
+      </ion-card-header>
+    
+
+      <ion-card-content>
+        <ion-item lines="none">
+          <!-- {{interpolacion}} 
+            Permite mostrar los datos desde el script a la visual
+            verificar el data en el home.page.ts
+          -->
+          <ion-label color="primary">Usuario:<strong>{{data.usuario}}</strong> </ion-label>
+          <ion-label color="primary">Edad:<strong>{{data.edad}}</strong> </ion-label>
+        </ion-item>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+
+<!-- Fade Footer -->
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <div class="footer">Derechos Reservados | @Tanya Suazo 2022</div>
+  </ion-toolbar>
+</ion-footer>
+
